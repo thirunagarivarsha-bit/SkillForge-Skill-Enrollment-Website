@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Enroll in SkillForge courses">
+<title>Enroll - SkillForge</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">SkillForge</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+        <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link" href="enroll.html">Enroll</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item ms-2"><button id="themeToggle" class="btn btn-outline-light btn-sm">🌙</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<header class="text-center py-5 mt-5 bg-light">
+  <h1>Course Enrollment</h1>
+  <p>Fill in your details to enroll</p>
+</header>
+
+<main class="container py-5">
+<form id="enrollForm" class="p-4 bg-white rounded shadow-sm">
+  <div class="mb-3">
+    <label for="name" class="form-label">Full Name</label>
+    <input type="text" id="name" class="form-control" required minlength="3">
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" id="email" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label for="phone" class="form-label">Phone</label>
+    <input type="tel" id="phone" class="form-control" pattern="[0-9]{10}" required>
+  </div>
+  <div class="mb-3">
+    <label for="course" class="form-label">Select Course</label>
+    <select id="course" class="form-select" required>
+      <option value="">-- Choose --</option>
+      <option>Java Programming</option>
+      <option>Python Development</option>
+      <option>Full Stack Development</option>
+      <option>React JS</option>
+      <option>Data Structures & Algorithms</option>
+      <option>AI & Mathematics</option>
+      <option>Communication Skills</option>
+      <option>Backend Development</option>
+      <option>CSS & Responsive Design</option>
+      <option>HTML Fundamentals</option>
+      <option>JavaScript Essentials</option>
+      <option>Interview Preparation</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Mode of Learning</label><br>
+    <input type="radio" name="mode" value="Online" required> Online
+    <input type="radio" name="mode" value="Offline" class="ms-3"> Offline
+  </div>
+  <div class="mb-3">
+    <label for="date" class="form-label">Preferred Start Date</label>
+    <input type="date" id="date" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label for="comments" class="form-label">Comments</label>
+    <textarea id="comments" class="form-control"></textarea>
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" id="terms" class="form-check-input" required>
+    <label for="terms" class="form-check-label">Agree to terms</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Enroll Now</button>
+  <p id="formMessage" class="mt-2 text-success"></p>
+</form>
+</main>
+<div class="enroll-fixed">enroll now</div>
+
+<footer class="py-3 bg-dark text-white text-center">
+  <p>© 2026 SkillForge. All Rights Reserved.</p>
+</footer>
+<script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
